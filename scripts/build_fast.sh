@@ -35,7 +35,7 @@ for arg in "$@"; do
             ;;
         --reconfigure)
             if [ -n "$COMMAND_ARG" ]; then
-                echo "--reconfigure can not be mix with --reconfigure"
+                echo "--reconfigure can not be mix with --rebuild"
                 show_usage
                 exit 1
             fi
