@@ -4,6 +4,7 @@
 
 ### Mandatory packages ###
 # https://buildroot.org/downloads/manual/manual.html#requirement-mandatory
+# recomended libncurses5-dev (ncurses-5) also
 
 sudo apt-get install \
 sed \
