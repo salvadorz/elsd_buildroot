@@ -1,0 +1,23 @@
+#!/bin/sh
+# Author: Salvador Zendejas
+
+
+case "$1" in
+    start)
+        echo "Loading k-modules"
+        /usr/sbin/scull_load
+        /usr/sbin/module_load faulty
+        modprobe hello
+        ;;
+    stop)
+        echo "Unloading k-modules"
+        /usr/sbin/scull_unload
+        /usr/sbin/module_unload faulty
+        rmmod hello
+        ;;
+    *)
+        echo "Usage: $0 {start|stop}"
+        exit 1
+esac
+
+exit 0
